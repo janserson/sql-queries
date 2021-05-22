@@ -57,8 +57,8 @@ RETURNS @T TABLE (
         t.c.value('localidade[1]', 'varchar(100)') as localidade,
         t.c.value('unidade[1]', 'varchar(100)') as unidade,
         t.c.value('uf[1]', 'char(2)') as uf,
-        t.c.value('ibge[1]', 'char(7)') as ibge
-        t.c.value('gia[1]', 'varchar(10)') as gia,
+        t.c.value('ibge[1]', 'char(7)') as ibge,
+        t.c.value('gia[1]', 'varchar(10)') as gia
     FROM @xml.nodes('//xmlcep') t(c)  
 
     -- Close the connection.
